@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft World</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>⛏️ MINECRAFT WORLD</h1>
+  <p>Твій власний блоковий світ!</p>
+  <button id="adminButton">⚙️ Адмін-панель</button>
+</header>
+<main>
+  <div class="info">
+    <h2 id="gameTitle">Мій Minecraft світ</h2>
+    <p id="message">Ласкаво просимо до гри!</p>
+    <span>Зламано блоків: <b id="count">0</b></span>
+  </div>
+  <div class="game"><canvas id="world" width="960" height="480"></canvas></div>
+  <h3>🎒 Інвентар</h3>
+  <div class="inventory">
+    <button class="block selected" data-block="grass">🟩 Трава</button>
+    <button class="block" data-block="dirt">🟫 Земля</button>
+    <button class="block" data-block="stone">⬜ Камінь</button>
+    <button class="block" data-block="wood">🪵 Дерево</button>
+    <button class="block" data-block="sand">🟨 Пісок</button>
+  </div>
+  <p class="help">Ліва кнопка миші — зламати блок.<br>Права кнопка миші — поставити блок.</p>
+  <button id="saveButton">💾 Зберегти світ</button>
+  <button id="resetButton">🔄 Новий світ</button>
+</main>
+<div id="adminModal" class="modal">
+  <div class="panel">
+    <button class="close" id="closeAdmin">✖</button>
+    <h2>🔐 Адмін-панель</h2>
+    <div id="login">
+      <input type="password" id="password" placeholder="Введи пароль адміністратора">
+      <button id="loginButton">Увійти</button>
+      <p id="error"></p>
+    </div>
+    <div id="adminContent" hidden>
+      <h3>Налаштування сайту</h3>
+      <label for="newTitle">Назва сайту:</label>
+      <input id="newTitle" placeholder="Нова назва">
+      <label for="newMessage">Повідомлення:</label>
+      <input id="newMessage" placeholder="Текст повідомлення">
+      <button id="applyButton">Застосувати</button>
+      <button id="adminReset">Очистити світ</button>
+      <button id="logoutButton">Вийти з адмінки</button>
+    </div>
+  </div>
+</div>
+<footer><p>© 2026 Minecraft World | Неофіційний фан-сайт</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

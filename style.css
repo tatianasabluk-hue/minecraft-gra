@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #101710; color: white; font-family: Arial, sans-serif; text-align: center; }
+header { background: #193d24; padding: 25px; border-bottom: 4px solid #52a447; }
+header h1 { color: #83ed67; letter-spacing: 2px; }
+button { border: none; padding: 12px 18px; margin: 5px; border-radius: 8px; background: #398c39; color: white; font-weight: bold; cursor: pointer; transition: .2s; }
+button:hover { background: #55b94d; transform: translateY(-2px); }
+main { max-width: 1050px; margin: 30px auto; padding: 15px; }
+.info { background: #1d2b20; border-radius: 12px; padding: 15px; margin-bottom: 20px; }
+.game { overflow: auto; border: 5px solid #416b39; border-radius: 12px; background: #87ceeb; max-width: 100%; }
+canvas { display: block; width: 100%; height: auto; cursor: crosshair; }
+.inventory { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.block { background: #263d2b; border: 2px solid transparent; }
+.block.selected { border-color: #9cff71; background: #416b39; }
+.help { color: #b8cbb8; line-height: 1.7; margin: 20px; }
+.modal { display: none; position: fixed; inset: 0; background: #000b; justify-content: center; align-items: center; padding: 15px; z-index: 10; }
+.panel { position: relative; background: #1b2b20; border: 2px solid #52a447; border-radius: 15px; padding: 30px; width: 100%; max-width: 430px; }
+.panel input { display: block; width: 100%; padding: 13px; margin: 12px 0; border: 1px solid #527b55; border-radius: 7px; background: #101710; color: white; }
+.panel label { display: block; text-align: left; margin-top: 15px; }
+.close { position: absolute; right: 10px; top: 10px; background: #a33; }
+#error { color: #ff7777; }
+footer { padding: 20px; background: #193d24; color: #b8cbb8; }
+@media (max-width: 600px) {
+  header h1 { font-size: 23px; }
+  main { padding: 8px; }
+  .inventory button { flex: 1 1 40%; }
+  .panel { padding: 25px 15px; }
+}
